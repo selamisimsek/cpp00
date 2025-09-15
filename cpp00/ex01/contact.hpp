@@ -3,6 +3,15 @@
 
 #include <string>
 
+enum  TokenType{
+    FIRST_NAME,
+    LAST_NAME,
+    NICKNAME,
+    PHONE_NUMBER,
+    DARKEST_SECRET,
+    INVALID
+};
+
 class Contact {
 private:
     std::string firstName;
@@ -17,13 +26,5 @@ public:
     std::string get(TokenType token) const;
 };
 
-enum class TokenType{
-    FIRST_NAME,
-    LAST_NAME,
-    NICKNAME,
-    PHONE_NUMBER,
-    DARKEST_SECRET,
-    INVALID
-};
 
 #endif
