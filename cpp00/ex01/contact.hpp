@@ -12,17 +12,18 @@ private:
     std::string darkestSecret;
 
 public:
-    void setFirstName(const std::string& str);
-    void setLastName(const std::string& str);
-    void setNickname(const std::string& str);
-    void setPhoneNumber(const std::string& str);
-    void setDarkestSecret(const std::string& str);
+    void set(const std::string& str , TokenType token);
 
-    std::string getFirstName() const;
-    std::string getLastName() const;
-    std::string getNickname() const;
-    std::string getPhoneNumber() const;
-    std::string getDarkestSecret() const;
+    std::string get(TokenType token) const;
+};
+
+enum class TokenType{
+    FIRST_NAME,
+    LAST_NAME,
+    NICKNAME,
+    PHONE_NUMBER,
+    DARKEST_SECRET,
+    INVALID
 };
 
 #endif
